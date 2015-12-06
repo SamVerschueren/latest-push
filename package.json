@@ -1,0 +1,43 @@
+{
+  "name": "latest-push",
+  "version": "0.0.0",
+  "description": "Get the latest push of a GitHub user.",
+  "license": "MIT",
+  "repository": "SamVerschueren/latest-push",
+  "author": {
+    "name": "Sam Verschueren",
+    "email": "sam.verschueren@gmail.com",
+    "url": "github.com/SamVerschueren"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "github",
+    "git",
+    "latest",
+    "push",
+    "gh",
+    "git-hub"
+  ],
+  "dependencies": {
+    "gh-got": "^2.3.0",
+    "github-parse-link": "^1.0.1",
+    "pinkie-promise": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
+  }
+}
