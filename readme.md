@@ -50,6 +50,12 @@ Default: `5`
 
 The maximum number of pages to iterate over to retrieve the latest push.
 
+##### exclude
+
+Type: `Array`
+
+The push ID's that should be skipped as result.
+
 
 ## License
 

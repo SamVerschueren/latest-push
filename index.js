@@ -2,6 +2,7 @@
 var ghGot = require('gh-got');
 var Promise = require('pinkie-promise');
 var parse = require('github-parse-link');
+var objectAssign = require('object-assign');
 
 function fetch(user, opts, url, page) {
 	page = page || 0;
@@ -13,7 +14,7 @@ function fetch(user, opts, url, page) {
 			}
 
 			var pushEvents = res.body.filter(function (event) {
-				return event.type === 'PushEvent';
+				return event.type === 'PushEvent' && opts.exclude.indexOf(event.id) === -1;
 			});
 
 			if (pushEvents.length === 0) {
@@ -42,8 +43,7 @@ module.exports = function (user, opts) {
 		return Promise.reject(new TypeError('Expected a user'));
 	}
 
-	opts = opts || {};
-	opts.pages = opts.pages || 5;
+	opts = objectAssign({pages: 5, exclude: []}, opts);
 
 	return fetch(user, opts);
 };

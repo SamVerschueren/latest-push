@@ -29,6 +29,7 @@
   "dependencies": {
     "gh-got": "^2.3.0",
     "github-parse-link": "^1.0.1",
+    "object-assign": "^4.0.1",
     "pinkie-promise": "^2.0.0"
   },
   "devDependencies": {
