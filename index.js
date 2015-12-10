@@ -34,6 +34,10 @@ function fetch(user, opts, url, page) {
 				throw new Error('No contributions found for this user');
 			}
 
+			if (err.statusCode === 403 && err.response.headers['x-ratelimit-remaining'] === '0') {
+				throw new Error('Rate limit exceeded');
+			}
+
 			throw err;
 		});
 }
