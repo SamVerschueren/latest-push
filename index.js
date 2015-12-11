@@ -24,7 +24,7 @@ function fetch(user, opts, url, page) {
 					throw new Error('No contributions found for this user');
 				}
 
-				return fetch(user, opts, links.next.replace('https://api.github.com/', ''), page + 1);
+				return fetch(user, opts, links.next, page + 1);
 			}
 
 			return pushEvents[0];
