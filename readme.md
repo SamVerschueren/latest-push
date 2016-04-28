@@ -45,7 +45,7 @@ Can be overriden globally with the `GITHUB_TOKEN` environment variable.
 
 ##### pages
 
-Type: `Number`  
+Type: `Number`<br>
 Default: `5`
 
 The maximum number of pages to iterate over to retrieve the latest push.

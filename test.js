@@ -1,8 +1,8 @@
 import test from 'ava';
 import fn from './';
 
-test('error', async t => {
-	await t.throws(fn(), 'Expected a user');
+test('error', t => {
+	t.throws(fn(), 'Expected a user');
 });
 
 test('result', async t => {
@@ -13,7 +13,6 @@ test('result', async t => {
 
 test('exclude', async t => {
 	const result = await fn('SamVerschueren');
-
 	const excludedResult = await fn('SamVerschueren', {exclude: [result.id]});
 
 	t.not(excludedResult.id, result.id);
