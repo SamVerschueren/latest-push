@@ -10,7 +10,7 @@
     "url": "github.com/SamVerschueren"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -27,13 +27,14 @@
     "git-hub"
   ],
   "dependencies": {
-    "gh-got": "^2.4.0",
-    "github-parse-link": "^1.1.1",
-    "object-assign": "^4.0.1",
-    "pinkie-promise": "^2.0.0"
+    "gh-got": "^4.0.0",
+    "github-parse-link": "^1.1.1"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

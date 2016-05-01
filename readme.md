@@ -31,7 +31,7 @@ Returns a promise for the latest push object.
 
 Type: `string`
 
-The user to retrieve the latest commit for.
+User to retrieve the latest commit for.
 
 #### options
 
@@ -41,20 +41,20 @@ Type: `string`
 
 GitHub [access token](https://github.com/settings/tokens/new).
 
-Can be overriden globally with the `GITHUB_TOKEN` environment variable.
+Can be set globally with the `GITHUB_TOKEN` environment variable.
 
 ##### pages
 
 Type: `Number`<br>
 Default: `5`
 
-The maximum number of pages to iterate over to retrieve the latest push.
+Maximum number of pages to iterate over to retrieve the latest push.
 
 ##### exclude
 
 Type: `Array`
 
-The push ID's that should be skipped as result.
+Push IDs that should be skipped as result.
 
 
 ## License
